@@ -1,48 +1,50 @@
 <header>
-	<div>Logo</div> //image or text with an image? do we place logos in an h1? is it part of nav with link to main site?
+	<div>Logo</div> 
 	<nav>
 		<span>Searchbar</span>
-		<span>Wishlist</span> //maybe divs to contain icon, title, description?
-		<span>Login</span> 
+		<span>Wishlist</span>
+		<span>Login</span>
 		<span>Cart</span>
 	</nav>
  </header>
-<section role="main"> //maybe use aria landmarks for semantics?
+<section role="main"> 
 	<div>
 		<div>breadcrumbs</div>
 		<h2>CTA Title</h2>
 		<h3>CTA Label</h3>
 		<div>Television pics with prices</div>
 		<div>
-			<span>TVFinder</span>//Link?
+			<span>TVFinder</span>
 			<span>Range-Slider(price possibly jQueryUI?)</span>
 			<span>Dropdowns(type brand sort)</span>
 		</div>
 	</div>
-	<div> //are these separate divs or sections or one long section?
-		<h4>Num Matches title</h4> //is this appropriate heading level?
-		<button>clear filters</button> //should this be contained in the above h4?
-		<div List of Televisions> //possibly unnecesary if the preceding tag is an h4
-			<article television>
+	<div> 
+		<h4>Num Matches title</h4>
+		<button>clear filters</button>
+		<div> 
+		{{#each models}}
+			<article>
 			<a>
-				<img picture />
-				<h3>Title<h3> // should the whole tv through price be the link or just this title?
-				<p>Description</p> //h tag? 
-				<h2>Price</h2> //matches cta main title but different font size so same h tag?
+				<img src="http://placekitten.com/100/100" />
+				<h3>Title<h3> 
+				<p>{{this.attributes.description}}</p>
+				<h2>{{this.attributes.price}}</h2>
 			</a>
-			<a>Rating (stars, possibly jQueryUI?) </a> //should this be a separate link to ratings? 
-			</television>
+			<a>Rating (stars, possibly jQueryUI?) </a> 
+			</article>
+		{{/each}}
 		</div>
 	</div>
 </section>
 <footer>
-	<img white logo />//possibly text with splat logo next to it?
-	<input sign up form />
-	<button>sign up</button> //should this whole line be in a block level element?
-	<four columns of links> //uls? divs? css columns?
+	<img src="http://placekitten.com/100/100" />
+	<input/>
+	<button>sign up</button>
+	<div>column of links</div>
 	<div>
 		<h5>Money Centre Title</h5>
-		<img Money Centre image />
+		<img src="http://placekitten.com/100/100"/>
 	</div>
 </footer>
 

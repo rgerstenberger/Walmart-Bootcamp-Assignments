@@ -1,0 +1,61 @@
+[     
+
+	{
+		"title": "Samsung 32-inch LCD HTDTV",
+    	"description": "Samsung 32C120U 32-Inch 720p 60Hz LCD HDTV (Black)", //the example JSON only had name but the page requires title and description
+     	"price": 390.99,     	
+     	"image": "images/tv1.png",//is there a placeholder image appropriate for this?
+     	"size": 32, //should proper defaults for numbers be 0?
+     	"type": "LCD"
+  	},
+  	{
+		"title": "Samsung 32-inch LCD HTDTV",
+    	"description": "Samsung 32C120U 32-Inch 720p 60Hz LCD HDTV (Black)", //the example JSON only had name but the page requires title and description
+     	"price": 390.99,     	
+     	"image": "images/tv1.png",//is there a placeholder image appropriate for this?
+     	"size": 32, //should proper defaults for numbers be 0?
+     	"type": "LCD"
+  	},
+  	{
+		"title": "Samsung 32-inch LCD HTDTV",
+    	"description": "Samsung 32C120U 32-Inch 720p 60Hz LCD HDTV (Black)", //the example JSON only had name but the page requires title and description
+     	"price": 390.99,     	
+     	"image": "images/tv1.png",//is there a placeholder image appropriate for this?
+     	"size": 32, //should proper defaults for numbers be 0?
+     	"type": "LCD"
+  	},
+  	{
+		"title": "Samsung 32-inch LCD HTDTV",
+    	"description": "Samsung 32C120U 32-Inch 720p 60Hz LCD HDTV (Black)", //the example JSON only had name but the page requires title and description
+     	"price": 390.99,     	
+     	"image": "images/tv1.png",//is there a placeholder image appropriate for this?
+     	"size": 32, //should proper defaults for numbers be 0?
+     	"type": "LCD"
+  	},
+  	{
+		"title": "Samsung 32-inch LCD HTDTV",
+    	"description": "Samsung 32C120U 32-Inch 720p 60Hz LCD HDTV (Black)", //the example JSON only had name but the page requires title and description
+     	"price": 390.99,     	
+     	"image": "images/tv1.png",//is there a placeholder image appropriate for this?
+     	"size": 32, //should proper defaults for numbers be 0?
+     	"type": "LCD"
+  	},
+  	{
+		"title": "Samsung 32-inch LCD HTDTV",
+    	"description": "Samsung 32C120U 32-Inch 720p 60Hz LCD HDTV (Black)", //the example JSON only had name but the page requires title and description
+     	"price": 390.99,     	
+     	"image": "images/tv1.png",//is there a placeholder image appropriate for this?
+     	"size": 32, //should proper defaults for numbers be 0?
+     	"type": "LCD"
+  	},
+  	{
+		"title": "Samsung 32-inch LCD HTDTV",
+    	"description": "Samsung 32C120U 32-Inch 720p 60Hz LCD HDTV (Black)", //the example JSON only had name but the page requires title and description
+     	"price": 390.99,     	
+     	"image": "images/tv1.png",//is there a placeholder image appropriate for this?
+     	"size": 32, //should proper defaults for numbers be 0?
+     	"type": "LCD"
+  	}
+
+
+	]
