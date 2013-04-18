@@ -1,0 +1,38 @@
+<div>
+  <span>TVFinder</span>
+  <span class="sizes">30-55</span><div class="noUiSlider"></div>
+  <label for="type">Type
+    <select name="type">
+      <option value="LCD" selected="selected">LCD</option>
+    </select>
+  </label>
+  <label for="brand">Brand
+    <select name="brand">
+      <option value="samsung" selected="selected">Samsung</option>
+    </select>
+  </label>
+  <label for="sortDirection">Sort
+  <select name="sortDirection">
+    <option value="pricelowtohigh" selected="selected">Price: Low to High</option>
+  </select></label>
+</div>
+<div> 
+<h4>Num Matches title</h4>
+<button>clear filters</button>
+<div> 
+{{#each models}}
+  <article>
+  <a>
+    <img src="{{this.attributes.image}}" />
+    <h3>{{this.attributes.name}}</h3> 
+    <p>{{this.attributes.description}}</p>
+    <h2>{{this.attributes.price}}</h2>
+  </a>
+  <a>Rating (stars, possibly jQueryUI?) </a> 
+  </article>
+{{/each}}
+</div>
+</div>
+
+
+

@@ -1,0 +1,28 @@
+<html>
+	<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="jquery.nouislider.js"></script>
+		<link rel="stylesheet" media="screen" href="nouislider.fox.css"/>
+	</head>
+<body>
+	<span></span><div class="noUiSlider"></div>
+	<script>
+		$(function(){
+			$(".noUiSlider").noUiSlider({
+    range: [20, 100]
+   ,start: [40, 80]
+   ,step: 20
+   ,slide: function(){
+      var values = $(this).val();
+      $("span").text(
+         values[0] +
+         " - " +
+         values[1]
+      );
+   }
+});
+		});
+	</script>
+</body>
+
+</html>
