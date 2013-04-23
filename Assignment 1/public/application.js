@@ -1,12 +1,94 @@
 window.Application = {};
 
-Application.IndexView = Backbone.View.extend({
-  render: function(collection) {
-    this.$el.empty();
-    var context = this.collection ? collection : {},
-        output = this.options.template(context);
+Application.TvFormView = Backbone.View.extend({
+  template: Handlebars.templates['TvFormView'],
+  render: function() {
+    var context = this.collection ? this.collection : {},
+        output = this.template(context);
     this.$el.html(output);
-  }  
+
+  },
+  initialize: function(){
+    //render so that dom elements exist
+    this.render();
+
+    this.minSize = parseInt(this.collection.min(function(m){return parseInt(m.get("size"))}).get("size"));
+    this.maxSize = parseInt(this.collection.max(function(m){return parseInt(m.get("size"))}).get("size"));;
+    this.$brand = $('select[name="brand"]');
+    this.$screenType = $('select[name="screenType"]');
+    this.$sortDirection = $('select[name="sortDirection"]');
+    $(".sizes").html(this.minSize + " - " + this.maxSize);
+    $("#nummatches").html(this.collection.length);
+    this.$slider = $(".noUiSlider").noUiSlider({
+      range: [this.minSize, this.maxSize],
+      start: [this.minSize, this.maxSize],
+      step: 1,
+      slide: function(){
+        $(".sizes").html($(this).val()[0] + " - " + $(this).val()[1]);        
+      }
+    });
+
+
+    //get all unique values for type and brand and populate selects
+    this.brands = _.union(this.collection.pluck("brand"));
+    this.types = _.union(this.collection.pluck("type"));
+
+    _.each(this.brands, function(b) {
+      var optionElement = '<option value = "'+ b + '">' + b + '</option>';
+      this.$brand.append(optionElement);
+    }, this)
+
+    _.each(this.types, function(t) {
+      var optionElement = '<option value = "'+ t + '">' + t + '</option>';
+      this.$screenType.append(optionElement);
+    }, this)
+
+
+
+    _.bindAll(this)
+  },
+  events: {
+    "change select": "updateTvs",
+    "click #clearfilters": "clearFilters",
+    "change .noUiSlider": "updateTvs"
+  },
+  updateTvs: function(event){    
+    //filter the collection based on form data
+    //check if selects say any
+    var brand = this.$brand.val();
+    var screenType = this.$screenType.val();
+    var sortDirection = this.$sortDirection.val();
+    var sliderVals = this.$slider.val();
+    Application.filteredTelevisions.set(this.collection.filter(function(m){
+      if(brand.toLowerCase() !== "any" && brand.toLowerCase() !== m.get("brand").toLowerCase()) return false;
+      if(screenType.toLowerCase() !== "any" && screenType.toLowerCase() !== m.get("type").toLowerCase()) return false;
+      if(sliderVals[0] > parseInt(m.get("size")) || sliderVals[1] < parseInt(m.get("size"))) return false;
+      return true;
+    }));
+    $("#nummatches").html(Application.filteredTelevisions.length);
+    Application.filteredTelevisions.trigger('change');
+  },
+  clearFilters: function(event){
+    //reset the collection and inputs
+    this.$slider.val([19, 100]);
+    this.$brand.val("any");
+    this.$screenType.val("any");
+    Application.filteredTelevisions.set(this.collection.models);
+    Application.filteredTelevisions.trigger('change');
+    $("#nummatches").html(Application.filteredTelevisions.length);
+  }
+});
+
+Application.TvListView = Backbone.View.extend({
+  template: Handlebars.templates['TvListView'],
+  render: function() {
+    var context = this.collection ? this.collection : {},
+        output = this.template(context);
+    this.$el.html(output);
+  },
+  initialize: function(){
+    this.collection.on('change', this.render, this);
+  }
 });
 
 $(function() {
@@ -15,54 +97,46 @@ $(function() {
   var Television = Backbone.Model.extend({
     defaults: {
       name: "",
-      description: "", //the example JSON only had name but the page requires title and description
+      description: "", 
       price: "",
-      image: "",//is there a placeholder image appropriate for this?
+      image: "",
       size: "", //should proper defaults for numbers be 0?
       type: "",
       brand: ""
     }
   });
 
-  // var TelevisionView = Backbone.View.extend({
-
-  // });
-
   var Televisions = Backbone.Collection.extend({
     model: Television,
-    url: "/televisions"    
+    url: "/televisions",
+    comparator: function(m){return parseInt(m.get("price"))}  
   });
 
+  var FilteredTelevisions = Backbone.Collection.extend({
+    model: Television,
+    comparator: function(m){return parseInt(m.get("price"))}    
+  });
 
   Application.televisions = new Televisions;
+  Application.filteredTelevisions = new FilteredTelevisions;
+
+
+
   Application.televisions.fetch({success: function(){
-      indexView.render(indexView.collection);
-      //Dom pieces, need to relocate after splitting out template section from static html
-      var slider = $(".noUiSlider").noUiSlider({
-        range: [19, 62],
-        start: [30, 55],
-        step: 1,
-        slide: function(){
-          var values = $(this).val();
-          $(".sizes").text(
-             values[0] +
-             " - " +
-             values[1]
-          );
-        }
-      });
+    var tvFormView = new Application.TvFormView({
+      collection: Application.televisions,
+      el: $('#TvFormViewTemplate')
+    });
+    //set filtered list to entire list at first
+    Application.filteredTelevisions.set(Application.televisions.sort().toArray());
+    //create a TvListView and set the filtered list to the tvListView collection
+    var tvListView = new Application.TvListView({
+      el: $('#TvListViewTemplate'),
+      collection: Application.filteredTelevisions
+    });
+    
+    tvListView.render();
   }});
-
-  var indexView = new Application.IndexView({
-    template: Handlebars.templates['index'],
-    collection: Application.televisions,
-    el: $('#indexViewTemplate'),
-    events: {
-      //all filter events should trigger the same refresh/filter data function?      
-    }
-  });
-
-
     
 
   
