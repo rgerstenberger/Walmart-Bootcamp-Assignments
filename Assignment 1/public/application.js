@@ -26,8 +26,7 @@ Application.TvFormView = Backbone.View.extend({
       slide: function(){
         $(".sizes").html($(this).val()[0] + " - " + $(this).val()[1]);        
       }
-    });
-
+    });    
 
     //get all unique values for type and brand and populate selects
     this.brands = _.union(this.collection.pluck("brand"));
@@ -48,16 +47,16 @@ Application.TvFormView = Backbone.View.extend({
     _.bindAll(this)
   },
   events: {
-    "change select": "updateTvs",
-    "click #clearfilters": "clearFilters",
-    "change .noUiSlider": "updateTvs"
+    'change select[name!="sortDirection"]': "updateTvs",
+    'change select[name="sortDirection"]': "sort",
+    'click #clearfilters': "clearFilters",
+    'change .noUiSlider': "updateTvs",
   },
   updateTvs: function(event){    
     //filter the collection based on form data
     //check if selects say any
     var brand = this.$brand.val();
     var screenType = this.$screenType.val();
-    var sortDirection = this.$sortDirection.val();
     var sliderVals = this.$slider.val();
     Application.filteredTelevisions.set(this.collection.filter(function(m){
       if(brand.toLowerCase() !== "any" && brand.toLowerCase() !== m.get("brand").toLowerCase()) return false;
@@ -67,6 +66,18 @@ Application.TvFormView = Backbone.View.extend({
     }));
     $("#nummatches").html(Application.filteredTelevisions.length);
     Application.filteredTelevisions.trigger('change');
+  },
+  sort: function(event){
+    var sortDirection = this.$sortDirection.val();
+    if(sortDirection === "pricelowtohigh"){
+      Application.filteredTelevisions.comparator = function(m){return parseInt(m.get("price"))}
+      Application.filteredTelevisions.sort();
+      Application.filteredTelevisions.trigger('change');
+    } else {
+      Application.filteredTelevisions.comparator = function(m){return -parseInt(m.get("price"))}
+      Application.filteredTelevisions.sort();
+      Application.filteredTelevisions.trigger('change');
+    }
   },
   clearFilters: function(event){
     //reset the collection and inputs
@@ -82,9 +93,10 @@ Application.TvFormView = Backbone.View.extend({
 Application.TvListView = Backbone.View.extend({
   template: Handlebars.templates['TvListView'],
   render: function() {
-    var context = this.collection ? this.collection : {},
+    var context = this.collection,
         output = this.template(context);
     this.$el.html(output);
+    $(".rateit").rateit();
   },
   initialize: function(){
     this.collection.on('change', this.render, this);
@@ -93,14 +105,13 @@ Application.TvListView = Backbone.View.extend({
 
 $(function() {
   
-  //Backbone pieces  
   var Television = Backbone.Model.extend({
     defaults: {
       name: "",
       description: "", 
       price: "",
       image: "",
-      size: "", //should proper defaults for numbers be 0?
+      size: "", 
       type: "",
       brand: ""
     }
