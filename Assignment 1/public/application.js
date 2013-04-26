@@ -17,16 +17,20 @@ Application.TvFormView = Backbone.View.extend({
     this.$brand = $('select[name="brand"]');
     this.$screenType = $('select[name="screenType"]');
     this.$sortDirection = $('select[name="sortDirection"]');
-    $(".sizes").html(this.minSize + " - " + this.maxSize);
     $("#nummatches").html(this.collection.length);
     this.$slider = $(".noUiSlider").noUiSlider({
       range: [this.minSize, this.maxSize],
       start: [this.minSize, this.maxSize],
       step: 1,
+      connect: true,
       slide: function(){
-        $(".sizes").html($(this).val()[0] + " - " + $(this).val()[1]);        
+        $(this).children("a").first().attr("data-size",$(this).val()[0]);
+        $(this).children("a").last().attr("data-size",$(this).val()[1]);         
       }
-    });    
+    });  
+    //initialize slider toggle data-size for pseudo elements
+    this.$slider.children("a").first().attr("data-size",this.minSize);
+    this.$slider.children("a").last().attr("data-size",this.maxSize);  
 
     //get all unique values for type and brand and populate selects
     this.brands = _.union(this.collection.pluck("brand"));
@@ -114,6 +118,7 @@ $(function() {
       size: "", 
       type: "",
       brand: ""
+      //add flag for rendered?
     }
   });
 

@@ -11,6 +11,7 @@
 	}
 	.noUiSlider {
 		position: relative;
+		float:left;
 	}
 	.noUiSlider a {
 		position: absolute;
@@ -56,7 +57,7 @@
 	}
 	.noUiSlider.connect a,
 	.noUiSlider.connect.lower {
-		background: #b2a98f;
+		background: #ffbb00;
 	}
 	.noUiSlider,
 	.noUiSlider.connect.lower a {

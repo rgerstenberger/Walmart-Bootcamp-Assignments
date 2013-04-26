@@ -8,35 +8,47 @@
     <script src="lib/backbone.js"></script>
     <script src="templates.js"></script>
     <script src="application.js"></script>
+<!--     <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Droid+Sans|Open+Sans|Actor' rel='stylesheet' type='text/css'>
+ -->    
     <link rel="stylesheet" media="screen" href="styles/nouislider.fox.css"/>
     <link rel="stylesheet" media="screen" href="styles/rateit.css"/>
+    <link rel="stylesheet" media="screen" href="styles/application.css"/>
+
   </head>
   <body>
     <header>
-      <div>Logo</div> 
+      <h1 class="main-logo">Walmart</h1> 
       <nav>
-        <span>Searchbar</span>
-        <span>Wishlist</span>
-        <span>Login</span>
-        <span>Cart</span>
+        <div class="searchbox"><input type="text" placeholder="Search" /></div>
+        <a><img src="images/create-wishlist-icon.png"/><h2>Create</h2><p>a new wishlist</p></a>
+        <a><img src="images/signin-icon.png"/><h2>Sign In</h2><p>to your account</p></a>
+        <a><img src="images/cart-icon.png"/><h2>0 Items</h2><p>in your cart</p></a>
       </nav>
      </header>
-    <section> 
-      <div>breadcrumbs</div>
-      <h2>CTA Title</h2>
-      <h3>CTA Label</h3>
-      <div>Television pics with prices</div>
+    <section>       
+      <div class="breadcrumbs">
+        <a class="home-icon"></a>
+        <a>Departments</a>
+        <a>Electronics</a>
+        <a>Tv's</a>
+      </div>
+      <div class="main-cta">
+        <h2>Get More, For Less</h2>
+        <h3>Find the perfect Television with our new <a>TVFinder<sup>TM</sup></a></h3>
+        <img src="images/tvsizes-cta.jpg"/>
+      </div>
       <div id="TvFormViewTemplate"></div>
       <div id="TvListViewTemplate"></div>
     </section>
     <footer>
-      <img src="http://placekitten.com/100/100" />
-      <input/>
+      <img src="images/walmart-logo-blue.png" />
+      <input type="text" placeholder="Sign up for our Mailing List"/>
       <button>sign up</button>
       <div>column of links</div>
       <div>
-        <h5>Money Centre Title</h5>
-        <img src="http://placekitten.com/100/100"/>
+        <h5>Walmart Money Centre</h5>
+        <img src="images/card-swipe.jpg"/>
       </div>
     </footer>
   </body>
