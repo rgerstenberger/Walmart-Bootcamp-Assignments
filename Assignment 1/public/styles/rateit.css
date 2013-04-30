@@ -18,6 +18,7 @@ div.rateit div.rateit-range
     display: inline-block;
     background: url(../images/star-white32.png);
     height: 32px;
+    background-size:20px 20px;
 }
 
 /* for IE 6 */
@@ -47,6 +48,7 @@ div.rateit div.rateit-hover-rtl, div.rateit div.rateit-selected-rtl
 div.rateit div.rateit-hover
 {
     background: url(../images/star-gold32.png) left -32px;
+        background-size:20px 20px;
 }
 
 div.rateit div.rateit-hover-rtl
@@ -57,6 +59,7 @@ div.rateit div.rateit-hover-rtl
 div.rateit div.rateit-selected
 {
     background: url(../images/star-gold32.png) left -16px;
+        background-size:20px 20px;
 }
 
 div.rateit div.rateit-selected-rtl
@@ -67,12 +70,14 @@ div.rateit div.rateit-selected-rtl
 div.rateit div.rateit-preset
 {
     background: url(../images/star-gold32.png) left -48px;
+        background-size:20px 20px;
     height: 32px;
 }
 
 div.rateit div.rateit-preset-rtl
 {
     background: url(../images/star-gold32.png) left -48px;
+        background-size:20px 20px;
 }
 
 div.rateit div.rateit-reset
@@ -93,22 +98,26 @@ div.rateit div.rateit-reset:hover
 div.bigstars div.rateit-range
 {
     background: url(../images/wal-star-empty.png);
+        background-size:20px 20px;
     height: 20px;
 }
 
 div.bigstars div.rateit-hover
 {
     background: url(../images/wal-star-gold.png);
+        background-size:20px 20px;
 }
 
 div.bigstars div.rateit-selected
 {
     background: url(../images/wal-star-gold.png);
+        background-size:20px 20px;
 }
 
 div.bigstars div.rateit-reset
 {
     background: url(../images/wal-star-gold.png);
+        background-size:20px 20px;
     width: 20px;
     height: 20px;
 
@@ -117,4 +126,5 @@ div.bigstars div.rateit-reset
 div.bigstars div.rateit-reset:hover
 {
     background: url(../images/wal-star-gold.png);
+        background-size:20px 20px;
 }
