@@ -12,6 +12,16 @@ body {
 	color:#444444;
 }
 
+h2 {
+	font-weight:normal;
+	font-size:36px;
+}
+
+h3{
+	color:#bbbbbb;
+	font-weight:normal;
+}
+
 a {
 	color:#1177BD;
 }
