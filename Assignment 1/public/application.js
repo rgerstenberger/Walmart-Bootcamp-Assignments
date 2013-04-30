@@ -17,7 +17,7 @@ Application.TvFormView = Backbone.View.extend({
     this.$brand = $('select[name="brand"]');
     this.$screenType = $('select[name="screenType"]');
     this.$sortDirection = $('select[name="sortDirection"]');
-    $("#nummatches").html(this.collection.length);
+    this.$("#nummatches").html(this.collection.length);
     this.$slider = $(".noUiSlider").noUiSlider({
       range: [this.minSize, this.maxSize],
       start: [this.minSize, this.maxSize],

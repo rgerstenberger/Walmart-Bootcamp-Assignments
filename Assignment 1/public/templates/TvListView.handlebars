@@ -1,11 +1,11 @@
-{{#each models}}
+{{#collection this}}
   <article>
   <a>
-    <img src="{{this.attributes.image}}" />
-    <h3>{{this.attributes.name}}</h3> 
-    <p>{{this.attributes.description}}</p>
-    <h2>{{this.attributes.price}}</h2>
+    <img src="{{image}}" />
+    <h3>{{name}}</h3> 
+    <p>{{description}}</p>
+    <h2>{{price}}</h2>
   </a>
-  <div class="rateit bigstars" data-rateit-starwidth="20" data-rateit-starheight="20" data-rateit-value="{{this.attributes.rating}}" data-rateit-ispreset="true" data-rateit-max="5" data-rateit-readonly="true"></div> 
+  <div class="rateit bigstars" data-rateit-starwidth="20" data-rateit-starheight="20" data-rateit-value="{{rating}}" data-rateit-ispreset="true" data-rateit-max="5" data-rateit-readonly="true"></div> 
   </article>
-{{/each}}
+{{/collection}}
