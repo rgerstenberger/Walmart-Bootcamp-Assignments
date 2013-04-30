@@ -170,6 +170,10 @@ section {
 	margin-bottom:30px;
 }
 
+.main-cta h3 {
+	margin-bottom:30px;
+}
+
 /* TvFormViewTemplate styles */
 
 #TvFormViewTemplate {
@@ -330,7 +334,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 /*tv list styles*/
 
 #TvListViewTemplate {
-	padding:0 20px;
+	padding:20px;
+	margin-bottom:20px;
+	overflow:hidden;
 }
 
 #TvListViewTemplate article {
@@ -344,7 +350,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 #TvListViewTemplate article a {
-
+	font-weight:bold;
 }
 
 #TvListViewTemplate article a img {
@@ -354,6 +360,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 #TvListViewTemplate article a h3 {
 	font-size:16px;
 	width:200px;
+	color:#1177BD;
+	font-weight:bold;
 	text-overflow: ellipsis;
 	overflow:hidden;
 }
@@ -367,6 +375,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 #TvListViewTemplate article a h2 {
 	color:#444444;
+	font-size:24px;
+	font-weight:bold;
 }
 
 
@@ -440,4 +450,85 @@ footer {
 	clear:both;
 	width:100%;
 	background-color:#0E77BD;
+	overflow: hidden;
+}
+
+footer .footer-sign-up {
+	width:60%;
+	margin:30px auto 40px auto;
+	height:50px;
+}
+
+.footer-sign-up img {
+	top:-10px;
+}
+
+.footer-sign-up input {
+	vertical-align: top;
+	margin:0px;
+	margin-left:20px;
+	text-indent: 15px;
+	font-size: 14px;
+	height:35px;
+	width:260px;
+	border:1px solid #cccccc;
+	border-radius:6px;
+	-moz-box-shadow: inset 0px 1px 2px 1px rgba(0,0,0,.5);
+   -webkit-box-shadow: inset -0px 1px 2px 1px rgba(0,0,0,.5);
+   box-shadow: inset -0px 1px 2px  1px rgba(0,0,0,.5);   
+}
+
+.footer-sign-up button {
+	vertical-align: top;
+	margin: 0px;
+	margin-left:10px;
+	font-size: 14px;
+	height:35px;
+	padding:0px 15px;
+	color:#ffffff;
+	border:1px solid #1069A6;
+	border-radius:6px;
+	-moz-box-shadow: inset -0px 2px 2px 1px rgba(255,255,255,.2);
+   -webkit-box-shadow: inset -0px 2px 2px 1px rgba(255,255,255,.2);
+   box-shadow: inset -0px 2px 2px 1px rgba(255,255,255,.2);
+   background: rgb(33,148,228); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(33,148,228,1) 0%, rgba(16,122,193,1) 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(33,148,228,1)), color-stop(99%,rgba(16,122,193,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(33,148,228,1) 0%,rgba(16,122,193,1) 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(33,148,228,1) 0%,rgba(16,122,193,1) 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(33,148,228,1) 0%,rgba(16,122,193,1) 99%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(33,148,228,1) 0%,rgba(16,122,193,1) 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2194e4', endColorstr='#107ac1',GradientType=0 ); /* IE6-9 */
+}
+
+footer .footer-links {
+	float:left;
+	width:600px;
+	overflow: hidden;
+	margin:0 20px;
+
+}
+
+.footer-links .link-column {
+	float:left;
+	padding:0px 30px;
+}
+
+.link-column a {
+	display:block;
+	color:#7EBDEC;
+	font-size:10px;
+	line-height:2;
+
+}
+
+footer .money-centre {
+	float:right;
+}
+
+.money-centre h5 {
+	color:#ffffff;
+	font-size:22px;
+	font-weight: normal;
+	margin-bottom:10px;
 }
