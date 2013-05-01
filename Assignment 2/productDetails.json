@@ -1,0 +1,211 @@
+{ "description" : "The sleek Sceptre X322BV-HD HDTV delivers crystal-clear pictures and brings out the best in HD programming. Featuring a 3,000:1 dynamic contrast ratio, this LCD HDTV produces vivid pictures in a widescreen aspect ratio, so you can enjoy the picture from anywhere in your room. It can also be used as a computer monitor via the VGA port. It features three HDMI ports and boasts a competent 6.5ms response time, which makes it popular with avid console gamers. The digital broadcast HDTV can render a maximum resolution of 1366 x 768 pixels. The Sceptre 32\" class LCD 720p 60 Hz HDTV comes with a built-in ATSC digital/ NTSC analog/Clear QAM tuner that allows for a wide array of possible input formats. Unlike older audio-video formats, the single cable HDMI port transmits high definition video and audio together without using multiple cables. The TV features a neat, intuitive interface that helps you operate it easily without the bundled remote.",
+    "images": ["./images/0079234323252_300X300.jpg", "./images/0079234323252_AV2_300X300.jpg", "./images/0079234323252_AV1_300X300.jpg","./images/0079234323252_AV_300X300.jpg"],
+    "name" : "Sceptre 32\" Class LCD 720p 60Hz HDTV, X322BV-HD",
+    "price" : "189.00",
+    "rating" : "4.08",
+    "brand": "Sceptre",
+    "type": "LCD",
+    "size": "32",
+    "relatedItems": [
+    	{ "description" : "The Sceptre X409BV-FHD 40\" 1080p LCD HDTV delivers top of the line picture and audio quality at an amazing value. It features a sleek and slim look that will give your home a new feeling with its enchanted glossy black housing that shines elegantly throughout the room. With an ultra fast response time of 8ms and a 60Hz refresh rate, this LCD TV with HDMI input lets you watch your favorite shows and movies flicker free. A high resolution of 1920 x 1080 enhances the image to look crisp and sharp and the amazing 90, 000:1 dynamic contrast automatically helps balance the images to look more vivid and lifelike. The digital tuner LCD TV's USB port helps further expand the functionality, allowing you to listen to music and view digital pictures quickly and conveniently.nnNote: You must have a source of HD programming in order to take full advantage of the Sceptre 39\" HDTV. Contact your local cable or satellite TV provider for details on how to upgrade.",
+		    "image" : "./images/0079234324090_300X300.jpg",
+		    "name" : "Sceptre 40 Class (38.5\" viewable)LCD 1080p 60Hz HDTV, X409BV-FHD",
+		    "price" : "278.00",
+		    "rating" : "4.16",
+		    "brand": "Sceptre",
+		    "type": "LCD",
+		    "size": "40"
+		  },
+		  { "description" : "The Sceptre 32-Inch Class LCD HDTV features a crystal clear LCD display that emits bright and robust colors. Three HDMI ports allow you to connect your high-definition components all at once. The Sceptre LCD TV offers an ultra fast response time of 6.5ms for a crisp, flicker-free image at 1080p Full HD resolution. The additional feature of a USB port helps further expand the functionality of your TV, allowing you to listen to music and view digital pictures quickly and conveniently. The ultra-slim design and eye-catching finish complements stainless steel electronics for a high-end, modern look.",
+		    "image" : "./images/0079234323253_300X300.jpg",
+		    "name" : "Sceptre 32\" Class LCD 1080p 60Hz HDTV, X325BV-FHD",
+		    "price" : "218.00",
+		    "rating" : "4.22",
+		    "brand": "Sceptre",
+		    "type": "LCD",
+		    "size": "32"
+		  },
+		  { "description" : "The ELEMENT ELCFW328 32\" 720p 60Hz LCD HDTV features built-in stereo speakers with simulated surround sound for an entertaining video and audio experience. The stand detaches for easy wall-mounting with an optional mount. Note: You must have a source of HD programming in order to take full advantage of the ELEMENT LCD HDTV. Contact your local cable or satellite TV provider for details on how to upgrade.",
+		    "image" : "./images/0009103740112_300X300.jpg",
+		    "name" : "ELEMENT ELCFW328 32\" 720p 60Hz LCD HDTV, Refurbished",
+		    "price" : "168.00",
+		    "rating" : "1",
+		    "brand": "ELEMENT",
+		    "type": "LCD",
+		    "size": "32"
+		  }
+    ],
+    "reviews": [
+
+		 { "iD" : "15739136__SUBMISSIONTIME_11347955",
+		        "name" : "Sceptre 32\" Class LCD 720p 60Hz HDTV, X322BV-HD",
+		        "overallRating" : "3",
+		        "ratings" : [ {
+		              "label" : "Value",
+		              "rating" : "2"
+		            },
+		            {
+		              "label" : "Fit Accuracy",
+		              "rating" : "1"
+		            },
+		            {
+		              "label" : "Picture Quality",
+		              "rating" : "5"
+		            },
+		            {
+		              "label" : "Sound Quality",
+		              "rating" : "1"
+		            },
+		            {
+		              "label" : "Features",
+		              "rating" : "3"
+		            }
+		          ],		        
+		        "reviewText" : "i think that this is a great price for a tv but this sound needs to be louder. Also the power cord got a short the second day i had it.",
+		        "reviewer" : "ladyace05",
+		        "reviewerProfile" : [ { 
+		        	  "label" : "Age",
+		              "value" : "25 - 34"
+		            },
+		            { "label" : "Gender",
+		              "value" : "Female"
+		            },
+		            { "label" : "Ownership",
+		              "value" : "3 - 4 months"
+		            },
+		            { "label" : "Usage",
+		              "value" : "Every day"
+		            }
+		          ],
+		        "submissionTime" : "2013-04-29T13:29:08",
+		        "title" : "need to be louder"
+		      },
+		      { "iD" : "15739136__SUBMISSIONTIME_11346639",
+		        "name" : "Sceptre 32\" Class LCD 720p 60Hz HDTV, X322BV-HD",
+		        "overallRating" : "2",
+		        "ratings" : [ {
+		              "label" : "Value",
+		              "rating" : "3"
+		            },
+		            {
+		              "label" : "Fit Accuracy",
+		              "rating" : "1"
+		            },
+		            {
+		              "label" : "Picture Quality",
+		              "rating" : "4"
+		            },
+		            {
+		              "label" : "Sound Quality",
+		              "rating" : "3"
+		            },
+		            {
+		              "label" : "Features",
+		              "rating" : "3"
+		            }
+		          ],		        
+		        "reviewText" : "I purchased this HDTV in June of 2012 for use in the bedroom. As a result it sees limited use compared with the primary TV in the family room. The picture quality was good for the sale price of $189 but it's not even close to the Sony Bravia 32\" in our lounge. The image is not as bright, vivid or crisp as the Sony, but for less than have the price, the image was very good in it's use as a secondary TV. The sound quality was average with no real bass and no real ability to handle movie sounds or music with great success. But it does work well in it's role as a bedroom unit playing primarily standard television programing. Unfortunately after only 10 months of service our unit has failed. During a recent power up the image shut off and only the sound remains. A strong odor of burnt electronics accompanied the failure. Sceptre requires that I ship the unit to them for warranty service and in either the original packaging (now gone) or request an approved package. I am required to pay shipping in either case. At a minimum this will be time consuming and cost between 10% and 15% of the original purchase price. Consider these potential future costs when opting for this price point model.",
+		        "reviewer" : "BP2012",
+		        "reviewerProfile" : [ { "label" : "Age",
+		              "value" : "45 - 54"
+		            },
+		            { "label" : "Gender",
+		              "value" : "Male"
+		            },
+		            { "label" : "Ownership",
+		              "value" : "9 - 10 months"
+		            },
+		            { "label" : "Usage",
+		              "value" : "Every few days"
+		            }
+		          ],
+		        "submissionTime" : "2013-04-29T11:17:01",
+		        "title" : "Good Picture while it lasted"
+		      },
+		      { "iD" : "15739136__SUBMISSIONTIME_11344205",
+		        "name" : "Sceptre 32\" Class LCD 720p 60Hz HDTV, X322BV-HD",
+		        "overallRating" : "5",
+		        "ratings" : [ {
+		              "label" : "Value",
+		              "rating" : "5"
+		            },
+		            {
+		              "label" : "Fit Accuracy",
+		              "rating" : "5"
+		            },
+		            {
+		              "label" : "Picture Quality",
+		              "rating" : "5"
+		            },
+		            {
+		              "label" : "Sound Quality",
+		              "rating" : "5"
+		            },
+		            {
+		              "label" : "Features",
+		              "rating" : "4"
+		            }
+		          ],		        
+		        "reviewText" : "I usually only by Samsung, actually all I own is Samsung. I bought this for a spare bedroom. Seems to work almost as well. No complaints",
+		        "reviewer" : "Paris2003",
+		        "reviewerProfile" : [ { "label" : "Age",
+		              "value" : "45 - 54"
+		            },
+		            { "label" : "Gender",
+		              "value" : "Female"
+		            },
+		            { "label" : "Ownership",
+		              "value" : "2 - 7 weeks"
+		            },
+		            { "label" : "Usage",
+		              "value" : "Once per week"
+		            }
+		          ],
+		        "submissionTime" : "2013-04-29T08:14:14",
+		        "title" : "Great TV for the price."
+		      },
+		      { "iD" : "15739136__SUBMISSIONTIME_11341236",
+		        "name" : "Sceptre 32\" Class LCD 720p 60Hz HDTV, X322BV-HD",
+		        "overallRating" : "4",
+		        "ratings" : [ {
+		              "label" : "Value",
+		              "rating" : "5"
+		            },
+		            {
+		              "label" : "Fit Accuracy",
+		              "rating" : "4"
+		            },
+		            {
+		              "label" : "Picture Quality",
+		              "rating" : "4"
+		            },
+		            {
+		              "label" : "Sound Quality",
+		              "rating" : "4"
+		            },
+		            {
+		              "label" : "Features",
+		              "rating" : "5"
+		            }
+		          ],		        
+		        "reviewText" : "This 32\" Sceptre LCD TV is everything I expected and more. Perfect for the bedroom and it has great picture quality. I love the way it compliments my bedroom as well.",
+		        "reviewer" : "CRell",
+		        "reviewerProfile" : [ { "label" : "Age",
+		              "value" : "25 - 34"
+		            },
+		            { "label" : "Gender",
+		              "value" : "Female"
+		            },
+		            { "label" : "Ownership",
+		              "value" : "2 - 7 weeks"
+		            },
+		            { "label" : "Usage",
+		              "value" : "Every day"
+		            }
+		          ],
+		        "submissionTime" : "2013-04-29T07:18:41",
+		        "title" : "Love it!!!"
+		      }
+
+    ]
+  }

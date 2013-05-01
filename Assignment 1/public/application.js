@@ -48,7 +48,9 @@ Application.TvFormView = Backbone.View.extend({
 
 
 
-    _.bindAll(this)
+    this.updateTvs = _.bind(this.updateTvs, this);
+    this.sort = _.bind(this.sort, this);
+    this.clearFilters = _.bind(this.clearFilters, this);
   },
   events: {
     'change select[name!="sortDirection"]': "updateTvs",
@@ -68,7 +70,7 @@ Application.TvFormView = Backbone.View.extend({
       if(sliderVals[0] > parseInt(m.get("size")) || sliderVals[1] < parseInt(m.get("size"))) return false;
       return true;
     }));
-    $("#nummatches").html(Application.filteredTelevisions.length);
+    this.$("#nummatches").html(Application.filteredTelevisions.length);
     Application.filteredTelevisions.trigger('change');
   },
   sort: function(event){
@@ -90,7 +92,7 @@ Application.TvFormView = Backbone.View.extend({
     this.$screenType.val("any");
     Application.filteredTelevisions.set(this.collection.models);
     Application.filteredTelevisions.trigger('change');
-    $("#nummatches").html(Application.filteredTelevisions.length);
+    this.$("#nummatches").html(Application.filteredTelevisions.length);
   }
 });
 

@@ -1,0 +1,37 @@
+<h2>{{name}}</h2>
+<a href="#home" class="closeDetails"></a>
+<div class="rateit"></div>
+<a>one review</a>
+<a>Write a Review</a>
+<a>Ask A Question</a>
+<h3>{{price}}</h3>
+<div class="carousel"></div>
+<div class="overview">
+	<h2>About</h4>
+	<p>{{description}}</p>
+	<div class="interact">
+		<select>Qty</select>
+		<button>Add to Cart</button>
+		<a>Find This Product Localy</a>
+		<a>Calculate Arrival Date</a>
+		<a>Share With a Friend</a>
+	</div>	
+</div>
+<div class="relatedItems">
+	<h2>People Who Viewed This Item Also Viewed</h2>
+	<button>See More</button>
+		{{>relatedList relatedItems}}
+</div>
+<div class="detailedSpecs">
+	<h2>Product Details</h2>
+	<button>Have A Question?</button>
+	<ul>
+		<li>Full Description</li>
+		<li>Specifications</li>
+		<li>Warranty</li>
+		<li>Financing</li>
+		<li>Gifting</li>
+	</ul>
+	<p>{{description}}</p>
+</div>
+<div id="reviewsView"></div>

@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="lib/jquery.nouislider.js"></script>
+    <script src="lib/jquery.rateit.js"></script> 
+    <script src="lib/underscore.js"></script>
+    <script src="lib/handlebars.js"></script>
+    <script src="lib/backbone.js"></script>
+    <script src="lib/collectionHelper.js"></script>
+    <script src="templates.js"></script>
+    <script src="application.js"></script>
+    <script src="lib/assignment1Views.js"></script>
+    <link rel="stylesheet" href="http://fonts.walmart.com/k/mym1yao-d.css?3bb2a6e53c9684ffdc9a9bf71b5b2a6295e5720163621489f1819d0db12b298d6cabafa475f7643aea1a64508568f08d644a27b752c8b3ca6b3ec45c6cac7231dc62e7730372b0bd0a0894fcceb0bfd980ae87993694782b4c60e44188e8526ab42ee8b4522a4f5c9008a1b05ae895">
+    <link rel="stylesheet" media="screen" href="styles/nouislider.fox.css"/>
+    <link rel="stylesheet" media="screen" href="styles/rateit.css"/>
+    <link rel="stylesheet" media="screen" href="styles/assignment1styles.css"/>
+    <link rel="stylesheet" media="screen" href="styles/application.css"/>
+
+  </head>
+  <body>
+    <div id="wrapper">
+    <header>
+      <h1 class="main-logo">Walmart</h1> 
+      <nav>
+        <div class="searchbox"><input type="text" placeholder="Search" /></div>
+        <a><img src="images/create-wishlist-icon.png"/><h2>Create</h2><p>a new wishlist</p></a>
+        <a><img src="images/signin-icon.png"/><h2>Sign In</h2><p>to your account</p></a>
+        <a><img src="images/cart-icon.png"/><h2>0 Items</h2><p>in your cart</p></a>
+      </nav>
+     </header>
+    <section>       
+      <div class="breadcrumbs">
+        <a class="home-icon"></a>
+        <a>Departments</a>
+        <a>Electronics</a>
+        <a>Tv's</a>
+      </div>
+      <div class="main-cta">
+        <h2>Get More, For Less</h2>
+        <h3>Find the perfect Television with our new <a>TVFinder<sup>TM</sup></a></h3>
+        <img src="images/tvsizes-cta.jpg"/>
+      </div>
+      <div id="TvFormViewTemplate"></div>
+      <div id="TvListViewTemplate"></div>
+    </section>
+    <footer>
+      <div class="horizontal-rule"><span></span></div>
+      <div class="footer-sign-up">
+        <img src="images/walmart-logo-blue.png"><input type="text" placeholder="Sign up for our Mailing List"/>
+        <button>sign up</button>
+      </div>
+      <div class="footer-links">
+        <div class="link-column">
+          <a>Corporate</a>
+          <a>Our Story</a>
+          <a>News &amp Views</a>
+          <a>Giving Back</a>
+          <a>Global Responsability</a>
+          <a>Investors</a>
+          <a>Suppliers</a>
+          <a>Careers</a>
+        </div>
+        <div class="link-column">
+          <a>About Walmart.com</a>
+          <a>Terms of Use</a>
+          <a>Affiliate Program</a>
+          <a>Sponsorship Submission</a>
+          <a>International Customers</a>
+          <a>About Our Ads</a>
+          <a>Store Finder</a>
+          <a>Printable Coupons</a>
+          <a>Associate Discount</a>
+          <a>Privacy &amp Security</a>
+          <a>California Privacy Rights</a>
+          <a>&#64WalmartLabs</a>
+          <a>See All Departments</a>
+        </div><a></a>
+        <div class="link-column">
+          <a>Help Center</a>
+          <a>Track Your Order</a>
+          <a>Returns Policy</a>
+          <a>Return an Item</a>
+          <a>Product Recalls</a>
+          <a>Contact Us</a>
+          <a>Feedback</a>
+        </div>
+        <div class="link-column">
+          <a>Black Friday</a>
+          <a>Cyber Monday</a>
+          <a>Thanksgiving</a>
+          <a>Laptops</a>
+          <a>iPads and Tablets</a>
+          <a>Appliances</a>
+          <a>TV's</a>
+          <a>Toys</a>
+          <a>eGift Cards</a>
+          <a>Best Sellers</a>
+          <a>New Arrivals</a>
+          <a>Top-Rated Items</a>
+        </div>
+      </div>
+      <div class="money-centre">
+        <h5>Walmart Money Centre</h5>
+        <img src="images/card-swipe.jpg"/>
+      </div>
+    </footer>
+    </div>
+  </body>
+</html>
