@@ -14,11 +14,11 @@ Application.TvFormView = Backbone.View.extend({
 
     this.minSize = parseInt(this.collection.min(function(m){return parseInt(m.get("size"))}).get("size"));
     this.maxSize = parseInt(this.collection.max(function(m){return parseInt(m.get("size"))}).get("size"));;
-    this.$brand = $('select[name="brand"]');
-    this.$screenType = $('select[name="screenType"]');
-    this.$sortDirection = $('select[name="sortDirection"]');
+    this.$brand = this.$('select[name="brand"]');
+    this.$screenType = this.$('select[name="screenType"]');
+    this.$sortDirection = this.$('select[name="sortDirection"]');
     this.$("#nummatches").html(this.collection.length);
-    this.$slider = $(".noUiSlider").noUiSlider({
+    this.$slider = this.$(".noUiSlider").noUiSlider({
       range: [this.minSize, this.maxSize],
       start: [this.minSize, this.maxSize],
       step: 1,
@@ -102,7 +102,7 @@ Application.TvListView = Backbone.View.extend({
     var context = this.collection,
         output = this.template(context);
     this.$el.html(output);
-    $(".rateit").rateit();
+    this.$(".rateit").rateit();
   },
   initialize: function(){
     this.collection.on('change', this.render, this);

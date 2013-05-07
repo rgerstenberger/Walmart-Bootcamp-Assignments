@@ -13,9 +13,9 @@ Application.TvFormView = Backbone.View.extend({
 
     this.minSize = parseInt(this.collection.min(function(m){return parseInt(m.get("size"))}).get("size"));
     this.maxSize = parseInt(this.collection.max(function(m){return parseInt(m.get("size"))}).get("size"));;
-    this.$brand = $('select[name="brand"]');
-    this.$screenType = $('select[name="screenType"]');
-    this.$sortDirection = $('select[name="sortDirection"]');
+    this.$brand = this.$('select[name="brand"]');
+    this.$screenType = this.$('select[name="screenType"]');
+    this.$sortDirection = this.$('select[name="sortDirection"]');
     this.$("#nummatches").html(this.collection.length);
     this.$slider = $(".noUiSlider").noUiSlider({
       range: [this.minSize, this.maxSize],

@@ -1,20 +1,43 @@
-<h2>{{name}}</h2>
-<a href="#home" class="closeDetails"></a>
-<div class="rateit"></div>
-<a>one review</a>
-<a>Write a Review</a>
-<a>Ask A Question</a>
-<h3>{{price}}</h3>
-<div class="carousel"></div>
+<header>
+	<h2>{{name}}</h2>
+	<a href="#home" class="closeDetails"></a>
+	<div class="rateit bigstars" data-rateit-starwidth="20" data-rateit-starheight="20" data-rateit-value="{{rating}}" data-rateit-ispreset="true" data-rateit-max="5" data-rateit-readonly="true"></div>
+	<div class="feedbackLinks">
+		<a>Num review</a>
+		<a>Write a Review</a>
+		<a>Ask A Question</a>
+	</div>
+	<h3>{{price}}</h3>
+</header>
+<div id="imgCarousel">
+	<div class="imgPrev"></div>
+	<div class="carouselImgBox">
+		<div class="carouselImgsWrapper">
+			<span><img class="img0" src="{{images.[0]}}"></span>
+		</div>
+	</div>
+	<div class="imgNext enabled"></div>
+	<div class="carouselPosition">
+		<span class="currentPositionDot"></span>
+		<span class="positionDot"></span>
+		<span class="positionDot"></span>
+		<span class="positionDot"></span>
+		<span class="positionDot"></span>
+	</div>
+</div>
 <div class="overview">
-	<h2>About</h4>
+	<h4>About</h4>
 	<p>{{description}}</p>
 	<div class="interact">
-		<select>Qty</select>
+		<label class="select-style">
+			<select>
+				<option value="" disabled selected>Qty</option>
+			</select>
+		</label>
 		<button>Add to Cart</button>
-		<a>Find This Product Localy</a>
-		<a>Calculate Arrival Date</a>
-		<a>Share With a Friend</a>
+		<a class="findLocally">Find This Product Locally</a>
+		<a class="arrivalDate">Calculate Arrival Date</a>
+		<a class="share">Share With a Friend</a>
 	</div>	
 </div>
 <div class="relatedItems">
@@ -34,4 +57,4 @@
 	</ul>
 	<p>{{description}}</p>
 </div>
-<div id="reviewsView"></div>
+<div id="reviewsViewTemplate"></div>

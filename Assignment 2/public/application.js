@@ -9,17 +9,17 @@ var AppRouter = Backbone.Router.extend({
   home: function(){},
   index: function(){
       Application.Product = Backbone.Model.extend({
-      defaults: {
-        name: "",
-        description: "", 
-        price: "",
-        image: "",
-        size: "", 
-        type: "",
-        brand: ""
-        //add flag for rendered?
-      }
-    });
+        defaults: {
+          name: "",
+          description: "", 
+          price: "",
+          image: "",
+          size: "", 
+          type: "",
+          brand: ""
+          //add flag for rendered?
+        }
+      });
 
     Application.Products = Backbone.Collection.extend({
       model: Application.Product,
@@ -94,22 +94,73 @@ Application.productDetailView = Backbone.View.extend({
   template: Handlebars.templates["ProductDetail"],
   initialize: function(){
     this.render = _.bind(this.render, this);
+    this.closePane = _.bind(this.closePane, this);
+    this.imgNext = _.bind(this.imgNext, this);
+
+    this.currentImg = 0;   
+    this.carouselClickLock = false;
   },
   render: function(){
     var context = this.model.attributes,
         output = this.template(context);
     this.$el.html(output);
+    this.$(".rateit").rateit();
   },
   events: {
-    "click a.closeDetails": function(event){
+    "click a.closeDetails": "closePane",
+    "click .imgNext.enabled": "imgNext",
+    "click .imgPrev.enabled": "imgPrev"
+    
+  },
+  closePane: function(event){
       this.$el.removeClass("showing");
       //wait for transition
       var that = this
       setTimeout(function(){
         that.remove();
       },1000);
+  },
+  imgNext: function(event){
+    //If the next image does not exist return
+    if(!this.model.attributes.images[this.currentImg + 1] || this.carouselClickLock) return;
+    this.carouselClickLock = true;
+    var nextImg = "img" + (this.currentImg + 1);
+    var that = this;
+    if($("." + nextImg).length){
+      this.$(".carouselImgsWrapper").animate({"left": ((this.$(".carouselImgsWrapper").position().left - 400) + "px")});
+      this.$(".currentPositionDot").animate({"left": ((this.$(".currentPositionDot").position().left + 23) + "px")}, function(){
+        that.carouselClickLock = false;
+      });    
+    } else {
+      this.$(".carouselImgsWrapper").append('<span><img class="' + nextImg +'" src="' + this.model.attributes.images[this.currentImg + 1] + '"></span>' );
+      this.$(".carouselImgsWrapper").width((parseInt(this.$(".carouselImgsWrapper").width(), 10)+ 400) + "px");
+      this.$(".carouselImgsWrapper").animate({"left": ((this.$(".carouselImgsWrapper").position().left - 400) + "px")});
+      this.$(".currentPositionDot").animate({"left": ((this.$(".currentPositionDot").position().left + 23) + "px")}, function(){
+        that.carouselClickLock = false;
+      });
     }
+    this.currentImg += 1;
+    !this.model.attributes.images[this.currentImg + 1] && this.$(".imgNext").removeClass("enabled");
+    this.$(".imgPrev").addClass("enabled");
+
+  },
+  imgPrev: function(event){
+    //If the next image does not exist return
+    if(!this.model.attributes.images[this.currentImg - 1] || this.carouselClickLock) return;
+    this.carouselClickLock = true;
+    var that = this;
+    var nextImg = "img" + (this.currentImg - 1);
+    if($("." + nextImg).length){
+      this.$(".carouselImgsWrapper").animate({"left": ((this.$(".carouselImgsWrapper").position().left + 400) + "px")});
+      this.$(".currentPositionDot").animate({"left": ((this.$(".currentPositionDot").position().left - 23) + "px")}, function(){
+        that.carouselClickLock = false;
+      }); 
+    } 
+    this.currentImg -= 1;
+    !this.model.attributes.images[this.currentImg - 1] && this.$(".imgPrev").removeClass("enabled");
+    this.$(".imgNext").addClass("enabled");
   }
+
 });
 
 

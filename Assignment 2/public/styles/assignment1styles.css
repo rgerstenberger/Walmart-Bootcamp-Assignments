@@ -27,6 +27,10 @@ a {
 	text-decoration: none;
 }
 
+p {
+	line-height:2;
+}
+
 
 /*Header styles*/
 header {
